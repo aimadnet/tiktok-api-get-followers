@@ -6,7 +6,7 @@ import csv
 
 scraptik_apikey = ""
 
-user_id = "6802299750194643973"
+user_id = "gameformoneys"
 
 fieldnames = [
     'unique_id',
