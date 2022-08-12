@@ -6,5 +6,8 @@ This script can get up to 5000 TikTok followers per user and export data to CSV.
 3. Update app.py with your API key
 4. Run the .py file!
 
-## Proof that this works
+## Notes
+1. You can scrape only up to 5K followers per user (TikTok limit)
+
+## Preview
 ![Preview](https://i.imgur.com/QqpH74a.png)
