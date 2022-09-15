@@ -4,9 +4,10 @@ import csv
 
 # Get your API key here: https://scraptik.com
 
-scraptik_apikey = ""
+scraptik_apikey = "ENTER API KEY HERE"
 
-user_id = "6802299750194643973"
+#Use Scraptik "Username to ID" under Services if you need to look it up
+user_id = "ENTER USER ID HERE"
 
 fieldnames = [
     'unique_id',
@@ -23,7 +24,7 @@ fieldnames = [
     'twitter_name'
 ]
 
-with open(r'data.csv', 'w') as f:
+with open(r'data.csv', 'w', encoding="utf-8") as f:
     writer = csv.writer(f)
     row = {}
     for x in fieldnames:
@@ -49,7 +50,7 @@ def get_followers(user_id, max_time):
         r = requests.get(url, headers=headers, params=querystring).json()
 
         for u in r["followers"]:
-            with open(r'data.csv', 'a') as f:
+            with open(r'data.csv', 'a', encoding="utf-8") as f:
                 writer = csv.writer(f)
                 row = {}
                 for x in fieldnames:
@@ -65,9 +66,9 @@ def get_followers(user_id, max_time):
         if r["has_more"]:
             get_followers(user_id, r["min_time"])
 
-    except:
+    except Exception as e:
         print("Error!")
-
+        print (repr(e)) 
         # retry?
         # get_followers(user_id, max_time)
     
