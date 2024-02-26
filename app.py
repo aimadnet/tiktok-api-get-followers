@@ -4,10 +4,10 @@ import csv
 
 # Get your API key here: https://scraptik.com
 
-scraptik_apikey = "ENTER API KEY HERE"
+scraptik_apikey = "dc8e210008mshe6e0c5cc32efe87p105d37jsn41b03726cfaa"
 
 #Use Scraptik "Username to ID" under Services if you need to look it up
-user_id = "ENTER USER ID HERE"
+user_id = "dellstorecpm.id"
 
 fieldnames = [
     'unique_id',
